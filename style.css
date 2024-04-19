@@ -1,0 +1,319 @@
+  .menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 210;
+    background-color: #3583bb00;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px;
+}
+#menu-btn-check:checked ~ .menu-btn span {
+  background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+  .menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index:200;
+    background-color: #161c357c;
+    transition: all 0.7s;
+}
+
+#menu-btn-check:checked ~ .menu-content {
+    left: 0;/*メニューを画面内へ*/
+}
+.menu-content ul {
+    padding: 70px 10px 0;
+}
+.menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+}
+.menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    box-sizing: border-box;
+    color:#ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+.menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+}
+	
+#menu-btn-check {
+    display: none;
+}
+
+
+  
+  body{
+    background-image: url(images/PMweb-1.png);
+    background-attachment: fixed;
+    margin:auto;
+    margin-left: 4%;
+    margin-right: 4%;
+    font-family:hero-new, kinto-sans, sans-serif; ;
+  }
+
+
+  
+  .logoimg{
+    margin-top: 70px;
+    padding-bottom: 5px;
+  }
+
+ .map{
+    margin-top: 50px;
+    text-align:center ;
+    width: 90%;
+    background-color: #ffffffb9;
+ }
+
+  table{
+    margin-top: 30px;
+    border-collapse:separate;
+    width: 100%;
+  }
+  
+  table th,table td{
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  table td.non{
+    background-color: #19132620;
+  }
+  
+  table th{
+    background-color: #0f07630d;
+    color: white;
+  }
+
+  table td{
+    background-color: #25175fc3;
+    font-size: 14px;
+  }
+
+  table td.date{
+    background-color: #050e31ba;
+    font-size: 16px;
+  }
+  a:link {
+      color: rgb(175, 189, 255);
+      text-decoration: none;
+    }
+
+  a:visited{
+  color : rgb(175, 189, 255);
+}
+  
+  .BACKNEXT{
+    display: inline;
+  }
+    
+  .About{
+    background-color: #050e317a;
+    margin: auto;
+    top: -30px;
+  }
+  
+  h1{
+    font-size: 80px;
+    padding-top: 20px;
+    color: #050e31;
+    text-shadow:1px 1px 0 rgb(255, 255, 255), -1px -1px 0 rgb(255, 255, 255),
+                -1px 1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255),
+                0px 1px 0 rgb(255, 255, 255),  1px 0 rgb(255, 255, 255),
+                -1px 0 0 rgb(255, 255, 255), 1px 0 0 rgb(255, 255, 255);
+  
+  }
+  
+  h2{
+    font-size: 24px;
+    text-align: left;
+    padding-top: 20px;
+    color: rgb(255, 255, 255);
+  
+  }
+  
+  
+  .list{
+    padding-left: 32%;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+  }
+  
+  img.youtubech {
+    border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+    width:  150px;       /* ※縦横を同値に */
+    height: 150px;       /* ※縦横を同値に */
+}
+  
+  p{
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(255, 255, 255);
+  }
+
+  ul.kome{
+    padding-left: 10px;
+    font-size: 12px;
+    color: #fff;
+    list-style: "※";
+  }
+
+  ul.cre{
+    color: #fff;
+    list-style: none;
+    text-align: left;
+    padding-left: 12px;
+  }
+
+  ul.cre li{
+    text-align: left;
+  }
+
+   
+  .listback{
+    padding-left: 32%;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    position: relative;
+    top:-555px;
+    left: 5px;
+  }
+  
+  h1{
+    margin-top: 30px;
+  }
+
+  h3{
+    color:rgb(255, 255, 255);
+  }
+
+  h4{
+    color:#fff;
+  }
+
+  ul.site{
+     color:#fff;
+     display:inline;
+    list-style: none;
+    font-size: 14px;
+  }
+  
+  footer{
+    color:#ffffff;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  
+@media screen and (max-width: 480px) {
+
+  body{background-image: url(images/PMweb-1.png);
+    background-attachment: fixed;
+  }
+
+ .sp{
+   text-align:center;
+ }
+  .pc{
+		display: none;
+	}
+
+  .logoimg{
+    background-color: #050e31;
+    width:100%;
+  }
+
+  .About{
+     width:auto;
+     margin: auto;
+     top: -10px;
+    }
+
+  
+
+  h1{
+    font-size: 60px;
+    padding-top: 20px;
+    color: #050e31;
+    text-shadow:0.7px 0.7px 0 rgb(255, 255, 255), -0.7px -0.7px 0 rgb(255, 255, 255),
+                -0.7px 0.7px 0 rgb(255, 255, 255), 0.7px -0.7px 0 rgb(255, 255, 255),
+                0px 0.7px 0 rgb(255, 255, 255),  0-0.7px 0 rgb(255, 255, 255),
+                -0.7px 0 0 rgb(255, 255, 255), 0.7px 0 0 rgb(255, 255, 255);
+  
+  }
+
+  p{
+    font-size: 14px;
+  }
+ 
+
+}
+
+@media screen and (min-width:481px) {
+	.sp{
+		display: none;
+	}
+
+  body{
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .pc{
+    text-align: center;
+  }
+  .logoimg{
+    width:100%;
+  }
+
+  }
